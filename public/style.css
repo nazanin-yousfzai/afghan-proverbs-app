@@ -1,0 +1,124 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: #f5f0fa;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #6b4ca0;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1,
+h2 {
+  color: #5c3c92;
+  text-align: center;
+}
+
+.proverb-card p {
+  margin: 5px 0;
+}
+
+form {
+  margin-top: 30px;
+  background: #eee7f7;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+input[type="text"],
+select,
+textarea {
+  width: 99%;
+  padding: 10px;
+  margin: 10px 0 20px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+button {
+  background-color: #6b4ca0;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #5c3c92;
+  color: white;
+}
+
+.category-filter {
+  margin-bottom: 20px;
+  text-align: right;
+}
+
+.category-filter select {
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.filter-section {
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: #efe6fa;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.filter-section label {
+  font-weight: bold;
+  color: #5c3c92;
+  margin-bottom: 8px;
+}
+
+.category-buttons a {
+  text-decoration: none;
+  color: #6b4ca0;
+  background-color: #e1d5f6;
+  padding: 6px 14px;
+  margin-right: 8px;
+  border-radius: 20px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.category-buttons a:hover {
+  background-color: #6b4ca0;
+  color: white;
+}
+
+.proverb-card {
+  background: #f6f0fb;
+  border-left: 5px solid #8e44ad;
+  padding: 15px 20px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  position: relative;
+}
+
+.proverb-card p {
+  margin: 8px 0;
+  font-size: 16px;
+}
+
+.category-badge {
+  background-color: #d9c6f1;
+  color: #4a2e75;
+  padding: 4px 10px;
+  font-size: 14px;
+  border-radius: 20px;
+  font-weight: bold;
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      form {
+        max-width: 600px;
+        margin: 40px auto;
+        background-color: #f5f0fa;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 0 10px rgba(138, 43, 226, 0.1);
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      h1 {
+        text-align: center;
+        color: #6b1ba7;
+        margin-bottom: 20px;
+      }
+
+      form input[type="text"] {
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        font-size: 16px;
+        transition: border-color 0.3s ease;
+      }
+
+      form input[type="text"]:focus {
+        border-color: #a55eea;
+        outline: none;
+        box-shadow: 0 0 5px rgba(165, 94, 234, 0.4);
+      }
+
+      form button {
+        padding: 12px;
+        background-color: #8e44ad;
+        color: white;
+        font-size: 17px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      form button:hover {
+        background-color: #6c3483;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Edit Proverb</h1>
+    <form action="/edit-proverb/<%= proverb.id %>" method="POST">
+      <input type="text" name="textDari" value="<%= proverb.textDari %>" />
+      <input type="text" name="textPashto" value="<%= proverb.textPashto %>" />
+      <input
+        type="text"
+        name="translationEn"
+        value="<%= proverb.translationEn %>"
+      />
+      <input type="text" name="category" value="<%= proverb.category %>" />
+      <input type="text" name="meaning" value="<%= proverb.meaning %>" />
+      <button type="submit">Update</button>
+    </form>
+  </body>
+</html>

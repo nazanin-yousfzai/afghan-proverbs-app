@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Welcome to Afghan Proverbs App!</h1>
+    <h2>Add new Proverb</h2>
+    <form action="/add-proverb" method="POST">
+      <input type="text" name="textDari" placeholder="Dari" />
+      <input type="text" name="textPashto" placeholder="Pashto" />
+      <input type="text" name="translationEn" placeholder="English" />
+      <input type="text" name="meaning" placeholder="meaning" />
+      <input type="text" name="category" placeholder="Category" />
+      <button type="submit">Add</button>
+    </form>
+
+    <div class="filter-section">
+      <label for="category">Filter by Category:</label>
+      <div class="category-buttons">
+        <a href="/?category=">All</a>
+        <a href="/?category=Love">Love</a>
+        <a href="/?category=Wisdom">Wisdom</a>
+        <a href="/?category=Friendship">Friendship</a>
+      </div>
+    </div>
+
+    <ol>
+      <% proverbs.forEach(proverb => { %>
+      <li class="proverb-card">
+        <strong>Dari:</strong> <%= proverb.textDari %><br />
+        <strong>Pashto:</strong> <%= proverb.textPashto %><br />
+        <strong>English:</strong> <%= proverb.translationEn %><br />
+        <strong>Meaning:</strong> <%= proverb.meaning %><br />
+        <strong>Category:</strong> <%= proverb.category %>
+
+        <form action="/delete-proverb/<%= proverb.id %>" method="POST">
+          <button type="submit">Delete</button>
+        </form>
+        <form
+          action="/edit-proverb/<%= proverb.id %>"
+          method="GET"
+          style="display: inline"
+        >
+          <button type="submit" class="category-badge">Edit</button>
+        </form>
+      </li>
+
+      <% }) %>
+    </ol>
+  </body>
+</html>
